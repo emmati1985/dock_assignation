@@ -24,7 +24,7 @@ sap.ui.define([
 					lineItemListTitle : this.getResourceBundle().getText("detailLineItemTableHeading")
 				});
 
-				// this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
+				 this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
 
 				this.setModel(oViewModel, "detailView");
 
@@ -99,13 +99,23 @@ sap.ui.define([
 			 * @private
 			 */
 			_onObjectMatched : function (oEvent) {
-				var sObjectId =  oEvent.getParameter("arguments").objectId;
+				// var sObjectId =  oEvent.getParameter("arguments").objectId;
+				// this.getModel().metadataLoaded().then( function() {
+				// 	var sObjectPath = this.getModel().createKey("DockAssignation", {
+				// 		date :  sObjectId
+				// 	});
+				// 	this._bindView("/" + sObjectPath);
+				// }.bind(this));
+				var oArgs = oEvent.getParameter("arguments");
 				this.getModel().metadataLoaded().then( function() {
-					var sObjectPath = this.getModel().createKey("DockAssignation", {
-						date :  sObjectId
+				var sObjectPath = this.getModel().createKey("assignation", {
+						plant :  oArgs.Plant,
+						date  :  oArgs.Date
 					});
-					this._bindView("/" + sObjectPath);
+				this._bindView("/" + sObjectPath);
 				}.bind(this));
+				var dummy = "casa";
+				var sara = 2;
 			},
 
 			/**

@@ -7,31 +7,41 @@
 			<l:VerticalLayout>
 				<Image class="sapUiSmallMargin" src="http://emccochin.com/wp-content/uploads/2016/04/work-in-progress_01.png" height="10%" width="10%"/>
 				<l:content>
-					<Table id="lineItemsList" width="auto" items="{DockToOrders}" 
-						noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">
-						<!-- Volver a sumarlo despues updateFinished="onListUpdateFinished" -->
-						<!--<headerToolbar>-->
-						<!--	<Toolbar id="lineItemsToolbar">-->
-						<!--		<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>-->
-						<!--	</Toolbar>-->
-						<!--</headerToolbar>-->
-						<columns>
-							<Column>
-								<Text text="{i18n>detailLineItemTableIDColumn}"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
-								<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>
-							</Column>
-						</columns>
+					<List noDataText="Drop list items here" id="LISTA" items="{orders}">
 						<items>
-							<ColumnListItem>
-								<cells>
-									<ObjectIdentifier title="{h1}" text="{dock}"/>
-									<ObjectNumber unit="{plant}"/>
-								</cells>
-							</ColumnListItem>
+							<ObjectListItem type="Active" counter="0" markFavorite="false" markFlagged="false" showMarkers="false"
+								id="__item15" title="{Dock}">
+								<attributes>
+									<ObjectAttribute active="false" id="__attribute205" text="{h1} : {h2} : {h3}"/>
+								</attributes>
+							</ObjectListItem>
 						</items>
-					</Table>
+					</List>
+					<!--<Table id="lineItemsList" width="auto" items="{DockToOrders}" -->
+					<!--	noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">-->
+					<!-- Volver a sumarlo despues updateFinished="onListUpdateFinished" -->
+					<!--<headerToolbar>-->
+					<!--	<Toolbar id="lineItemsToolbar">-->
+					<!--		<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>-->
+					<!--	</Toolbar>-->
+					<!--</headerToolbar>-->
+					<!--	<columns>-->
+					<!--		<Column>-->
+					<!--			<Text text="{i18n>detailLineItemTableIDColumn}"/>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">-->
+					<!--			<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>-->
+					<!--		</Column>-->
+					<!--	</columns>-->
+					<!--	<items>-->
+					<!--		<ColumnListItem>-->
+					<!--			<cells>-->
+					<!--				<ObjectIdentifier title="{h1}" text="{dock}"/>-->
+					<!--				<ObjectNumber unit="{plant}"/>-->
+					<!--			</cells>-->
+					<!--		</ColumnListItem>-->
+					<!--	</items>-->
+					<!--</Table>-->
 				</l:content>
 			</l:VerticalLayout>
 			<!--<Text text="WORK IN PROGRESS" class="sapUiSmallMargin"/>-->
