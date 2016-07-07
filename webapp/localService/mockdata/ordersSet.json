@@ -1,37 +1,28 @@
 [{
 	"Dbkey": "1",
-	"Ftype": "SD",
-	"Factura": "0065594900",
-	"Vbeln": "0065594900",
-	"Fecha": "/Date(1467514800000)/",
-	"Importe": 1000000,
-	"Referencia": "2025A233490",
-	"Moneda": "ARS"
+	"Plant": "WF",
+	"Dock": "A",
+	"Date": "20160708",
+	"Order": "000000001",
+	"StartTime": 10000000,
+	"EndTime": 20000000,
+	"Note": "ARS"
 }, {
 	"Dbkey": "2",
-	"Ftype": "SD",
-	"Factura": "0065594901",
-	"Vbeln": "0065594901",
-	"Fecha": "/Date(1467514800000)/",
-	"Importe": 1000001,
-	"Referencia": "2025A233491",
-	"Moneda": "ARS"
+	"Plant": "WF",
+	"Dock": "B",
+	"Date": "20160708",
+	"Order": "000000001",
+	"StartTime": 10000000,
+	"EndTime": 20000000,
+	"Note": "ARS"
 }, {
 	"Dbkey": "3",
-	"Ftype": "SD",
-	"Factura": "0065594902",
-	"Vbeln": "0065594902",
-	"Fecha": "/Date(1467342000000)/",
-	"Importe": 1100222,
-	"Referencia": "",
-	"Moneda": "ARS"
-}, {
-	"Dbkey": "4",
-	"Ftype": "SD",
-	"Factura": "0065594903",
-	"Vbeln": "0065594903",
-	"Fecha": "/Date(1467428400000)/",
-	"Importe": 100,
-	"Referencia": "",
-	"Moneda": "ARS"
+	"Plant": "KL",
+	"Dock": "A",
+	"Date": "20160708",
+	"Order": "000000001",
+	"StartTime": 10000000,
+	"EndTime": 20000000,
+	"Note": "ARS"
 }]
