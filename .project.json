@@ -50,7 +50,7 @@
   "mockpreview": {
     "mockUri": "",
     "metadataFilePath": "",
-    "loadJSONFiles": false,
+    "loadJSONFiles": true,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
   },

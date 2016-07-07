@@ -1,53 +1,271 @@
 [{
-	"Dbkey": "1",
-	"Plant": "WF",
-	"Dock" : "A",
-	"Date" : "20160708",
-	"h1"   : "X",
-	"h2"   : "X",
-	"h3"   : "X",
-	"h4"   : "X",
-	"h5"   : "X",
-	"h6"   : "X",
-	"h7"   : "X",
-	"h8"   : "X"
+	"Dbkey": "Dbkey 1",
+	"Plant": "Plant 1",
+	"Dock": "Dock 1",
+	"Date": "/Date(1407097719000)/",
+	"h1": true,
+	"h2": true,
+	"h3": false,
+	"h4": false,
+	"h5": true,
+	"h6": true,
+	"h7": true,
+	"h8": true,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 1')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 1')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 1')/plants"
+		}
+	}
 }, {
-	"Dbkey": "2",
-	"Plant": "WF",
-	"Dock" : "B",
-	"Date" : "20160708",
-	"h1"   : "X",
-	"h2"   : "X",
-	"h3"   : "X",
-	"h4"   : "X",
-	"h5"   : "",
-	"h6"   : "",
-	"h7"   : "",
-	"h8"   : ""
+	"Dbkey": "Dbkey 2",
+	"Plant": "Plant 2",
+	"Dock": "Dock 2",
+	"Date": "/Date(1507494519000)/",
+	"h1": false,
+	"h2": false,
+	"h3": false,
+	"h4": false,
+	"h5": false,
+	"h6": true,
+	"h7": false,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 2')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 2')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 2')/plants"
+		}
+	}
 }, {
-	"Dbkey": "3",
-	"Plant": "KL",
-	"Dock" : "A",
-	"Date" : "20160708",
-	"h1"   : "X",
-	"h2"   : "",
-	"h3"   : "X",
-	"h4"   : "X",
-	"h5"   : "",
-	"h6"   : "",
-	"h7"   : "",
-	"h8"   : ""
+	"Dbkey": "Dbkey 3",
+	"Plant": "Plant 3",
+	"Dock": "Dock 3",
+	"Date": "/Date(1359491319000)/",
+	"h1": true,
+	"h2": false,
+	"h3": true,
+	"h4": false,
+	"h5": false,
+	"h6": false,
+	"h7": true,
+	"h8": true,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 3')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 3')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 3')/plants"
+		}
+	}
 }, {
-	"Dbkey": "4",
-	"Plant": "WF",
-	"Dock" : "A",
-	"Date" : "20160709",
-	"h1"   : "X",
-	"h2"   : "X",
-	"h3"   : "X",
-	"h4"   : "X",
-	"h5"   : "",
-	"h6"   : "",
-	"h7"   : "",
-	"h8"   : ""
+	"Dbkey": "Dbkey 4",
+	"Plant": "Plant 4",
+	"Dock": "Dock 4",
+	"Date": "/Date(1184099319000)/",
+	"h1": true,
+	"h2": true,
+	"h3": false,
+	"h4": true,
+	"h5": false,
+	"h6": false,
+	"h7": false,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 4')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 4')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 4')/plants"
+		}
+	}
+}, {
+	"Dbkey": "Dbkey 5",
+	"Plant": "Plant 5",
+	"Dock": "Dock 5",
+	"Date": "/Date(1482697719000)/",
+	"h1": true,
+	"h2": false,
+	"h3": false,
+	"h4": true,
+	"h5": false,
+	"h6": false,
+	"h7": false,
+	"h8": true,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 5')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 5')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 5')/plants"
+		}
+	}
+}, {
+	"Dbkey": "Dbkey 6",
+	"Plant": "Plant 6",
+	"Dock": "Dock 6",
+	"Date": "/Date(1196972919000)/",
+	"h1": true,
+	"h2": false,
+	"h3": true,
+	"h4": true,
+	"h5": false,
+	"h6": false,
+	"h7": true,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 6')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 6')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 6')/plants"
+		}
+	}
+}, {
+	"Dbkey": "Dbkey 7",
+	"Plant": "Plant 7",
+	"Dock": "Dock 7",
+	"Date": "/Date(1147984119000)/",
+	"h1": true,
+	"h2": true,
+	"h3": true,
+	"h4": true,
+	"h5": true,
+	"h6": true,
+	"h7": false,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 7')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 7')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 7')/plants"
+		}
+	}
+}, {
+	"Dbkey": "Dbkey 8",
+	"Plant": "Plant 8",
+	"Dock": "Dock 8",
+	"Date": "/Date(1055622519000)/",
+	"h1": false,
+	"h2": true,
+	"h3": true,
+	"h4": false,
+	"h5": false,
+	"h6": true,
+	"h7": true,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 8')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 8')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 8')/plants"
+		}
+	}
+}, {
+	"Dbkey": "Dbkey 9",
+	"Plant": "Plant 9",
+	"Dock": "Dock 9",
+	"Date": "/Date(1366144119000)/",
+	"h1": true,
+	"h2": true,
+	"h3": true,
+	"h4": false,
+	"h5": true,
+	"h6": true,
+	"h7": true,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 9')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 9')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 9')/plants"
+		}
+	}
+}, {
+	"Dbkey": "Dbkey 10",
+	"Plant": "Plant 10",
+	"Dock": "Dock 10",
+	"Date": "/Date(1083270519000)/",
+	"h1": false,
+	"h2": true,
+	"h3": true,
+	"h4": true,
+	"h5": true,
+	"h6": true,
+	"h7": false,
+	"h8": false,
+	"__metadata": {
+		"uri": "assignationSet('Dbkey 10')",
+		"type": "DockReservation.assignation"
+	},
+	"orders": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 10')/orders"
+		}
+	},
+	"plants": {
+		"__deferred": {
+			"uri": "assignationSet('Dbkey 10')/plants"
+		}
+	}
 }]
