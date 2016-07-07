@@ -1,0 +1,24 @@
+<mvc:View controllerName="dockass.controller.Master" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified"
+	xmlns="sap.m" xmlns:semantic="sap.m.semantic">
+	<semantic:MasterPage id="page" title="{masterView>/title}" navButtonPress="onNavBack" showNavButton="true">
+		<semantic:subHeader>
+			<Bar id="headerBar">
+				<contentMiddle>
+					<Input id="PlantId" value="{/plant}" placeholder="{i18n>masterPlant}" width="60%"/>
+			<!--		<SearchField-->
+			<!--				id="searchField"-->
+			<!--				showRefreshButton="{= !${device>/support/touch} }"-->
+			<!--				tooltip="{i18n>masterSearchTooltip}"-->
+			<!--				width="100%"-->
+			<!--				search="onSearch">-->
+			<!--		</SearchField>-->
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+		<semantic:content>
+			<PullToRefresh id="pullToRefresh" visible="{device>/support/touch}" refresh="onRefresh"/>
+			<!-- For client side filtering add this to the items attribute:  parameters: {operationMode: 'Client'}}" -->
+			<u:Calendar id="calendar" select="onCalendarSelect"/>
+		</semantic:content>
+	</semantic:MasterPage>
+</mvc:View>

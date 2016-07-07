@@ -1,0 +1,92 @@
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="DockReservation">
+           <EntityType Name="assignation">
+                <Key>
+                    <PropertyRef  Name="Dbkey"/>
+                </Key>
+                <Property Name="Dbkey" Type="Edm.String" Nullable="false" sap:label="DBKey"></Property>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" sap:label="Plant"></Property>
+                <Property Name="Dock" Type="Edm.String" Nullable="false" sap:label="Dock"></Property>
+                <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:label="Date"></Property>
+                <Property Name="h1" Type="Edm.Boolean" Nullable="true" sap:label="H1"></Property>
+                <Property Name="h2" Type="Edm.Boolean" Nullable="true" sap:label="H2"></Property>
+                <Property Name="h3" Type="Edm.Boolean" Nullable="true" sap:label="H3"></Property>
+                <Property Name="h4" Type="Edm.Boolean" Nullable="true" sap:label="H4"></Property>
+                <Property Name="h5" Type="Edm.Boolean" Nullable="true" sap:label="H5"></Property>
+                <Property Name="h6" Type="Edm.Boolean" Nullable="true" sap:label="H6"></Property>
+                <Property Name="h7" Type="Edm.Boolean" Nullable="true" sap:label="H7"></Property>
+                <Property Name="h8" Type="Edm.Boolean" Nullable="true" sap:label="H8"></Property>
+                <NavigationProperty Name="orders" Relationship="DockReservation.assignation_orders" ToRole="orders" FromRole="assignation"></NavigationProperty>
+                <NavigationProperty Name="plants" Relationship="DockReservation.plants_assignation" ToRole="plants" FromRole="assignation"></NavigationProperty>
+            </EntityType>
+            <EntityType Name="orders">
+                <Key>
+                    <PropertyRef  Name="Dbkey"/>
+                </Key>
+                <Property Name="Dbkey" Type="Edm.String" Nullable="false" sap:label="DBkey"></Property>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" sap:label="Plant"></Property>
+                <Property Name="Dock" Type="Edm.String" Nullable="false" sap:label="Dock"></Property>
+                <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:label="Date"></Property>
+                <Property Name="Order" Type="Edm.String" Nullable="false" sap:label="Order Number"></Property>
+                <Property Name="StartTime" Type="Edm.Time" Nullable="false" sap:label="Start Time" MaxLength="8"></Property>
+                <Property Name="EndTime" Type="Edm.Time" Nullable="false" sap:label="End Time" MaxLength="8"></Property>
+                <Property Name="Note" Type="Edm.String" Nullable="true" sap:label="Note"></Property>
+                <NavigationProperty Name="assignation" Relationship="DockReservation.assignation_orders" ToRole="assignation" FromRole="orders"></NavigationProperty>
+            </EntityType>
+            <EntityType Name="plants">
+                <Key>
+                    <PropertyRef  Name="Plant"/>
+                    <PropertyRef  Name="Date"/>
+                </Key>
+                <Property Name="Plant" Type="Edm.String" Nullable="false" sap:label="Plant Id"></Property>
+                <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:label="Date"></Property>
+                <Property Name="Description" Type="Edm.String" Nullable="true" sap:label="Description"></Property>
+                <NavigationProperty Name="assignation" Relationship="DockReservation.plants_assignation" ToRole="assignation" FromRole="plants"></NavigationProperty>
+            </EntityType>
+            <Association Name="assignation_orders">
+                <End Type="DockReservation.assignation" Role="assignation" Multiplicity="0..1"></End>
+                <End Type="DockReservation.orders" Role="orders" Multiplicity="*"></End>
+                <ReferentialConstraint>
+                    <Principal Role="assignation">
+                        <PropertyRef Name="Dbkey"/>
+                    </Principal>
+                    <Dependent Role="orders">
+                        <PropertyRef Name="Dbkey"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="plants_assignation">
+                <End Type="DockReservation.plants" Role="plants" Multiplicity="1"></End>
+                <End Type="DockReservation.assignation" Role="assignation" Multiplicity="*"></End>
+                <ReferentialConstraint>
+                    <Principal Role="plants">
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Date"/>
+                    </Principal>
+                    <Dependent Role="assignation">
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Date"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="DockReservation" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="assignationSet" EntityType="DockReservation.assignation"></EntitySet>
+                <EntitySet Name="ordersSet" EntityType="DockReservation.orders"></EntitySet>
+                <EntitySet Name="plantsSet" EntityType="DockReservation.plants"></EntitySet>
+                <AssociationSet Name="assignation_ordersSet" Association="DockReservation.assignation_orders">
+                    <End Role="assignation" EntitySet="assignationSet" ></End>
+                    <End Role="orders"  EntitySet="ordersSet"></End>
+                </AssociationSet>
+                <AssociationSet Name="plants_assignation" Association="DockReservation.plants_assignation">
+                    <End Role="plants" EntitySet="plantsSet" ></End>
+                    <End Role="assignation"  EntitySet="assignationSet"></End>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
