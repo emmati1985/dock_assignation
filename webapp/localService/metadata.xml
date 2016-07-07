@@ -41,10 +41,8 @@
             <EntityType Name="plants">
                 <Key>
                     <PropertyRef  Name="Plant"/>
-                    <PropertyRef  Name="Date"/>
                 </Key>
                 <Property Name="Plant" Type="Edm.String" Nullable="false" sap:label="Plant Id"></Property>
-                <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:label="Date"></Property>
                 <Property Name="Description" Type="Edm.String" Nullable="true" sap:label="Description"></Property>
                 <NavigationProperty Name="assignation" Relationship="DockReservation.plants_assignation" ToRole="assignation" FromRole="plants"></NavigationProperty>
             </EntityType>
@@ -66,11 +64,9 @@
                 <ReferentialConstraint>
                     <Principal Role="plants">
                         <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="Date"/>
                     </Principal>
                     <Dependent Role="assignation">
                         <PropertyRef Name="Plant"/>
-                        <PropertyRef Name="Date"/>
                     </Dependent>
                 </ReferentialConstraint>
             </Association>
