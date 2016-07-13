@@ -1,8 +1,8 @@
 [{
 	"Dbkey": "Dbkey 1",
-	"Plant": "Plant 1",
+	"Plant": "WF",
 	"Dock": "Dock 1",
-	"Date": "/Date(1407097719000)/",
+	"Date": "/Date(1467514800000)/",
 	"h1": true,
 	"h2": true,
 	"h3": false,
@@ -27,9 +27,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 2",
-	"Plant": "Plant 2",
-	"Dock": "Dock 2",
-	"Date": "/Date(1507494519000)/",
+	"Plant": "KL",
+	"Dock": "Dock 1",
+	"Date": "/Date(1467514800000)/",
 	"h1": false,
 	"h2": false,
 	"h3": false,
@@ -54,9 +54,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 3",
-	"Plant": "Plant 3",
-	"Dock": "Dock 3",
-	"Date": "/Date(1359491319000)/",
+	"Plant": "WF",
+	"Dock": "Dock 1",
+	"Date": "/Date(1467428400000)/",
 	"h1": true,
 	"h2": false,
 	"h3": true,
@@ -81,9 +81,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 4",
-	"Plant": "Plant 4",
-	"Dock": "Dock 4",
-	"Date": "/Date(1184099319000)/",
+	"Plant": "KL",
+	"Dock": "Dock 1",
+	"Date": "/Date(1467601200000)/",
 	"h1": true,
 	"h2": true,
 	"h3": false,
@@ -108,9 +108,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 5",
-	"Plant": "Plant 5",
-	"Dock": "Dock 5",
-	"Date": "/Date(1482697719000)/",
+	"Plant": "WF",
+	"Dock": "Dock 1",
+	"Date": "/Date(1467514800000)/",
 	"h1": true,
 	"h2": false,
 	"h3": false,
@@ -135,9 +135,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 6",
-	"Plant": "Plant 6",
-	"Dock": "Dock 6",
-	"Date": "/Date(1196972919000)/",
+	"Plant": "WF",
+	"Dock": "Dock 2",
+	"Date": "/Date(1467514800000)/",
 	"h1": true,
 	"h2": false,
 	"h3": true,
@@ -162,9 +162,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 7",
-	"Plant": "Plant 7",
-	"Dock": "Dock 7",
-	"Date": "/Date(1147984119000)/",
+	"Plant": "WF",
+	"Dock": "Dock 1",
+	"Date": "/Date(1467601200000)/",
 	"h1": true,
 	"h2": true,
 	"h3": true,
@@ -189,9 +189,9 @@
 	}
 }, {
 	"Dbkey": "Dbkey 8",
-	"Plant": "Plant 8",
-	"Dock": "Dock 8",
-	"Date": "/Date(1055622519000)/",
+	"Plant": "WF",
+	"Dock": "Dock 2",
+	"Date": "/Date(1467601200000)/",
 	"h1": false,
 	"h2": true,
 	"h3": true,
@@ -212,60 +212,6 @@
 	"plants": {
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 8')/plants"
-		}
-	}
-}, {
-	"Dbkey": "Dbkey 9",
-	"Plant": "Plant 9",
-	"Dock": "Dock 9",
-	"Date": "/Date(1366144119000)/",
-	"h1": true,
-	"h2": true,
-	"h3": true,
-	"h4": false,
-	"h5": true,
-	"h6": true,
-	"h7": true,
-	"h8": false,
-	"__metadata": {
-		"uri": "assignationSet('Dbkey 9')",
-		"type": "DockReservation.assignation"
-	},
-	"orders": {
-		"__deferred": {
-			"uri": "assignationSet('Dbkey 9')/orders"
-		}
-	},
-	"plants": {
-		"__deferred": {
-			"uri": "assignationSet('Dbkey 9')/plants"
-		}
-	}
-}, {
-	"Dbkey": "Dbkey 10",
-	"Plant": "Plant 10",
-	"Dock": "Dock 10",
-	"Date": "/Date(1083270519000)/",
-	"h1": false,
-	"h2": true,
-	"h3": true,
-	"h4": true,
-	"h5": true,
-	"h6": true,
-	"h7": false,
-	"h8": false,
-	"__metadata": {
-		"uri": "assignationSet('Dbkey 10')",
-		"type": "DockReservation.assignation"
-	},
-	"orders": {
-		"__deferred": {
-			"uri": "assignationSet('Dbkey 10')/orders"
-		}
-	},
-	"plants": {
-		"__deferred": {
-			"uri": "assignationSet('Dbkey 10')/plants"
 		}
 	}
 }]

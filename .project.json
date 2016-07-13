@@ -26,12 +26,6 @@
     },
     "/webapp/view/DetailNoObjectsAvailable.view.xml": {
       "entitySet": "UNBINDKEY"
-    },
-    "/webapp/view/Master.view.xml": {
-      "entitySet": "DockAssignation"
-    },
-    "/webapp/view/Detail.view.xml": {
-      "entitySet": "DockAssignation"
     }
   },
   "generation": [

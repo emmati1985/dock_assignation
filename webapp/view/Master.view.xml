@@ -1,5 +1,4 @@
-<mvc:View controllerName="dockass.controller.Master" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified"
-	xmlns="sap.m" xmlns:semantic="sap.m.semantic">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:semantic="sap.m.semantic" controllerName="dockass.controller.Master">
 	<semantic:MasterPage id="page" title="{masterView>/title}" navButtonPress="onNavBack" showNavButton="true">
 		<semantic:subHeader>
 			<Bar id="headerBar">
@@ -13,6 +12,13 @@
 			<!--				search="onSearch">-->
 			<!--		</SearchField>-->
 				</contentMiddle>
+			<contentRight>
+			    <InputListItem type="Navigation" counter="0" label="Input List Item" id="__item0">
+			        <content>
+			            <Input ariaLabelledBy="__item0-label" value="input" width="100%" id="__input1"/>
+			        </content>
+			    </InputListItem>
+			</contentRight>
 			</Bar>
 		</semantic:subHeader>
 		<semantic:content>

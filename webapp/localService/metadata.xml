@@ -7,9 +7,11 @@
             xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="DockReservation">
            <EntityType Name="assignation">
                 <Key>
-                    <PropertyRef  Name="Dbkey"/>
+                    <PropertyRef  Name="Plant"/>
+                    <PropertyRef  Name="Date"/>
+                    <PropertyRef  Name="Dock"/>
                 </Key>
-                <Property Name="Dbkey" Type="Edm.String" Nullable="false" sap:label="DBKey"></Property>
+                <Property Name="DbkeyOrder" Type="Edm.String" Nullable="false" sap:label="DBKey"></Property>
                 <Property Name="Plant" Type="Edm.String" Nullable="false" sap:label="Plant"></Property>
                 <Property Name="Dock" Type="Edm.String" Nullable="false" sap:label="Dock"></Property>
                 <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:label="Date"></Property>
@@ -51,7 +53,7 @@
                 <End Type="DockReservation.orders" Role="orders" Multiplicity="*"></End>
                 <ReferentialConstraint>
                     <Principal Role="assignation">
-                        <PropertyRef Name="Dbkey"/>
+                        <PropertyRef Name="DbkeyOrder"/>
                     </Principal>
                     <Dependent Role="orders">
                         <PropertyRef Name="Dbkey"/>
