@@ -12,13 +12,6 @@
 			<!--				search="onSearch">-->
 			<!--		</SearchField>-->
 				</contentMiddle>
-			<contentRight>
-			    <InputListItem type="Navigation" counter="0" label="Input List Item" id="__item0">
-			        <content>
-			            <Input ariaLabelledBy="__item0-label" value="input" width="100%" id="__input1"/>
-			        </content>
-			    </InputListItem>
-			</contentRight>
 			</Bar>
 		</semantic:subHeader>
 		<semantic:content>
