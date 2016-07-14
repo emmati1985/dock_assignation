@@ -2,8 +2,10 @@
 sap.ui.define([
 	"dockass/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"dockass/model/formatter"
-], function(BaseController, JSONModel, formatter) {
+	"dockass/model/formatter",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
+], function(BaseController, JSONModel, formatter, Filter, FilterOperator) {
 	"use strict";
 
 	return BaseController.extend("dockass.controller.Detail", {
@@ -103,32 +105,28 @@ sap.ui.define([
 		 * @private
 		 */
 		_onObjectMatched: function(oEvent) {
-			// var sObjectId =  oEvent.getParameter("arguments").objectId;
-			// this.getModel().metadataLoaded().then( function() {
-			// 	var sObjectPath = this.getModel().createKey("DockAssignation", {
-			// 		date :  sObjectId
-			// 	});
-			// 	this._bindView("/" + sObjectPath);
-			// }.bind(this));
 			var oArgs = oEvent.getParameter("arguments");
 			var vPlant = oArgs.Plant;
 			var vDate  = oArgs.Date;
 			var oDate = this.oFormatYyyymmdd.parse(oArgs.Date);
 			var oModel = this.getModel();
 			
+			// build filter array
+			var aFilter = [];
+			if (oDate) {
+				aFilter.push(new Filter("Date", FilterOperator.EQ, oDate));
+			}
+			// filter binding
+			var oList = this.getView().byId("LISTA");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+			
 			oModel.metadataLoaded().then(function() {
-				// var sObjectPath = this.getModel().createKey("assignationSet", {
-				// 	Plant: vPlant,
-				// 	Date: oDate,
-				// 	Dock: "Dock 1"   
-				// });
 				var sObjectPath = this.getModel().createKey("plantsSet", {
 					Plant: vPlant
 				});
 				this._bindView("/" + sObjectPath);
 			}.bind(this));
-			var dummy = "casa";
-			var sara = 2;
 		},
 
 		/**
