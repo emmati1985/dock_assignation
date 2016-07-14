@@ -49,8 +49,7 @@
     "mockRequestsFilePath": ""
   },
   "translation": {
-    "translationDomain": "",
-    "supportedLanguages": "en,fr,de",
+    "supportedLanguages": "en,fr,de,es",
     "defaultLanguage": "en",
     "defaultI18NPropertyFile": "i18n.properties",
     "resourceModelName": "i18n"

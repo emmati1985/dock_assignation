@@ -24,6 +24,11 @@ sap.ui.define([
 				lineItemListTitle: this.getResourceBundle().getText("detailLineItemTableHeading")
 			});
 
+			this.oFormatYyyymmdd = sap.ui.core.format.DateFormat.getInstance({
+				pattern: "yyyyMMdd",
+				calendarType: sap.ui.core.CalendarType.Gregorian
+			});
+
 			this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
 
 			this.setModel(oViewModel, "detailView");
@@ -106,10 +111,19 @@ sap.ui.define([
 			// 	this._bindView("/" + sObjectPath);
 			// }.bind(this));
 			var oArgs = oEvent.getParameter("arguments");
-			this.getModel().metadataLoaded().then(function() {
-				var sObjectPath = this.getModel().createKey("assignationSet", {
-					plant: oArgs.Plant,
-					date: oArgs.Date
+			var vPlant = oArgs.Plant;
+			var vDate  = oArgs.Date;
+			var oDate = this.oFormatYyyymmdd.parse(oArgs.Date);
+			var oModel = this.getModel();
+			
+			oModel.metadataLoaded().then(function() {
+				// var sObjectPath = this.getModel().createKey("assignationSet", {
+				// 	Plant: vPlant,
+				// 	Date: oDate,
+				// 	Dock: "Dock 1"   
+				// });
+				var sObjectPath = this.getModel().createKey("plantsSet", {
+					Plant: vPlant
 				});
 				this._bindView("/" + sObjectPath);
 			}.bind(this));

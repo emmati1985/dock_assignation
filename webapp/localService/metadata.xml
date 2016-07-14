@@ -13,8 +13,8 @@
                 </Key>
                 <Property Name="DbkeyOrder" Type="Edm.String" Nullable="false" sap:label="DBKey"></Property>
                 <Property Name="Plant" Type="Edm.String" Nullable="false" sap:label="Plant"></Property>
-                <Property Name="Dock" Type="Edm.String" Nullable="false" sap:label="Dock"></Property>
                 <Property Name="Date" Type="Edm.DateTime" Nullable="false" sap:label="Date"></Property>
+                <Property Name="Dock" Type="Edm.String" Nullable="false" sap:label="Dock"></Property>
                 <Property Name="h1" Type="Edm.Boolean" Nullable="true" sap:label="H1"></Property>
                 <Property Name="h2" Type="Edm.Boolean" Nullable="true" sap:label="H2"></Property>
                 <Property Name="h3" Type="Edm.Boolean" Nullable="true" sap:label="H3"></Property>

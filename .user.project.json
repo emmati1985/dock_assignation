@@ -2,7 +2,7 @@
   "run": [
     {
       "filePath": "/Dock_control/webapp/test/mockServer.html",
-      "previewMode": 1,
+      "previewMode": 0,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
       "urlParameters": [
@@ -18,14 +18,14 @@
         }
       ],
       "hashParameter": "",
-      "ui5ActiveVersion": null,
+      "ui5ActiveVersion": "1.36.12",
       "ui5VerSource": null,
       "isDefaultVersion": 1,
       "_metadata": {
         "id": 37567899,
         "runnerId": "webapprunner",
         "displayName": "App (Mock Server)",
-        "lastRunTimeStamp": 1468436513516
+        "lastRunTimeStamp": 1468510496656
       }
     },
     {

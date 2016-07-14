@@ -50,6 +50,8 @@ sap.ui.define([
 				pattern: "yyyyMMdd",
 				calendarType: sap.ui.core.CalendarType.Gregorian
 			});
+			
+			this.oFormatnav = sap.ui.core.format.DateFormat.getDateInstance();
 
 			this.getRouter().getRoute("master").attachPatternMatched(this._onMasterMatched, this);
 			this.getRouter().attachBypassed(this.onBypassed, this);
@@ -100,6 +102,7 @@ sap.ui.define([
 			if (aSelectedDates.length > 0) {
 				oDate = aSelectedDates[0].getStartDate();
 				this._showDetail(this.oFormatYyyymmdd.format(oDate), vPlantId);
+				// this._showDetail(oDate, vPlantId);
 			}
 		},
 
