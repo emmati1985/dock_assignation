@@ -107,7 +107,7 @@ sap.ui.define([
 		_onObjectMatched: function(oEvent) {
 			var oArgs = oEvent.getParameter("arguments");
 			var vPlant = oArgs.Plant;
-			var vDate  = oArgs.Date;
+			// var vDate  = oArgs.Date;
 			var oDate = this.oFormatYyyymmdd.parse(oArgs.Date);
 			var oModel = this.getModel();
 			
@@ -117,9 +117,14 @@ sap.ui.define([
 				aFilter.push(new Filter("Date", FilterOperator.EQ, oDate));
 			}
 			// filter binding
-			var oList = this.getView().byId("LISTA");
-			var oBinding = oList.getBinding("items");
-			oBinding.filter(aFilter);
+			// var oList = this.getView().byId("LISTA");
+			// var oBinding = oList.getBinding("items");
+			// oBinding.filter(aFilter);
+			
+			var oTable = this.getView().byId("Table");
+			var oBindTab = oTable.getBinding("rows");
+			oBindTab.filter(aFilter);
+			// filter(oFilter, "Application");
 			
 			oModel.metadataLoaded().then(function() {
 				var sObjectPath = this.getModel().createKey("plantsSet", {

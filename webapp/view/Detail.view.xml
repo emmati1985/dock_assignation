@@ -7,21 +7,69 @@
 			<l:VerticalLayout>
 				<Image class="sapUiSmallMargin" src="http://emccochin.com/wp-content/uploads/2016/04/work-in-progress_01.png" height="10%" width="10%"/>
 				<l:content>
-					<List noDataText="Drop list items here" id="LISTA" items="{assignation}">
-						<items>
-							<ObjectListItem type="Active" counter="0" markFavorite="false" markFlagged="false" showMarkers="false" id="__item15" title="{Dock}">
-								<attributes>
-									<ObjectAttribute active="true" id="__attribute205" text="{h1} : {h2} : {h3}"/>
-								</attributes>
-							</ObjectListItem>
-						</items>
-					</List>
+					<!--<List noDataText="Drop list items here" id="LISTA" items="{assignation}">-->
+					<!--	<items>-->
+					<!--		<ObjectListItem type="Active" counter="0" markFavorite="false" markFlagged="false" showMarkers="false" id="__item15" title="{Dock}">-->
+					<!--			<attributes>-->
+					<!--				<ObjectAttribute active="true" id="__attribute205" text="{h1} : {h2} : {h3}"/>-->
+					<!--			</attributes>-->
+					<!--		</ObjectListItem>-->
+					<!--	</items>-->
+					<!--</List>-->
 					<t:Table id="Table" rows="{assignation}" width="auto">
 						<t:columns>
 							<t:Column width="11rem">
 								<Label text="Dock"/>
 								<t:template>
 									<Text text="{Dock}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h1"/>
+								<t:template>
+									<Text text="{h1}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h2"/>
+								<t:template>
+									<Text text="{h2}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h3"/>
+								<t:template>
+									<Text text="{h3}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h4"/>
+								<t:template>
+									<Text text="{h4}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h5"/>
+								<t:template>
+									<Text text="{h5}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h6"/>
+								<t:template>
+									<Text text="{h6}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h7"/>
+								<t:template>
+									<Text text="{h7}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h8"/>
+								<t:template>
+									<Text text="{h8}"/>
 								</t:template>
 							</t:Column>
 						</t:columns>
