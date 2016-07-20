@@ -25,11 +25,7 @@
         "id": 37567899,
         "runnerId": "webapprunner",
         "displayName": "App (Mock Server)",
-<<<<<<< Upstream, based on a6e820d60e159d765202f6a775333889017f84c3
         "lastRunTimeStamp": 1468599021094
-=======
-        "lastRunTimeStamp": 1469044786011
->>>>>>> c0e52d0 Con checks OK en detail
       }
     },
     {
