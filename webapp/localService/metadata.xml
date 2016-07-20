@@ -80,7 +80,7 @@
                     <End Role="assignation" EntitySet="assignationSet" ></End>
                     <End Role="orders"  EntitySet="ordersSet"></End>
                 </AssociationSet>
-                <AssociationSet Name="plants_assignation" Association="DockReservation.plants_assignation">
+                <AssociationSet Name="plants_assignationSet" Association="DockReservation.plants_assignation">
                     <End Role="plants" EntitySet="plantsSet" ></End>
                     <End Role="assignation"  EntitySet="assignationSet"></End>
                 </AssociationSet>
