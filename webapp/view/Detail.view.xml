@@ -1,5 +1,4 @@
-<!--xmlns:t="sap.ui.table"-->
-<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:t="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
 	controllerName="dockass.controller.Detail">
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
@@ -8,72 +7,164 @@
 			<l:VerticalLayout>
 				<Image class="sapUiSmallMargin" src="http://emccochin.com/wp-content/uploads/2016/04/work-in-progress_01.png" height="10%" width="10%"/>
 				<l:content>
-					<Table id="Table" width="auto" items="{path:'assignation', sorter: { path: 'Dock' }}">
-						<columns>
-							<Column id="column0">
-								<header>
-									<Label id="label0" text="Dock"/>
-								</header>
-							</Column>
-							<Column id="column1">
-								<header>
-									<Label id="label1" text="H1"/>
-								</header>
-							</Column>
-							<Column id="column2">
-								<header>
-									<Label id="label2" text="H2"/>
-								</header>
-							</Column>
-							<Column id="column3">
-								<header>
-									<Label id="label3" text="H3"/>
-								</header>
-							</Column>
-							<Column id="column4">
-								<header>
-									<Label id="label4" text="H4"/>
-								</header>
-							</Column>
-							<Column id="column5">
-								<header>
-									<Label id="label5" text="H5"/>
-								</header>
-							</Column>
-							<Column id="column6">
-								<header>
-									<Label id="label6" text="H6"/>
-								</header>
-							</Column>
-							<Column id="column7">
-								<header>
-									<Label id="label7" text="H7"/>
-								</header>
-							</Column>
-							<Column id="column8">
-								<header>
-									<Label id="label8" text="H8"/>
-								</header>
-							</Column>
-						</columns>
-						<items id="items">
-							<ColumnListItem id="collist">
-								<cells>
-									<ObjectIdentifier title="{Dock}"/>
-									<ObjectStatus id="stat1" icon="{= ${h1} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h1} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat2" icon="{= ${h2} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h2} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat3" icon="{= ${h3} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h3} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat4" icon="{= ${h4} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h4} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat5" icon="{= ${h5} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h5} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat6" icon="{= ${h6} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h6} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat7" icon="{= ${h7} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h7} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat8" icon="{= ${h8} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h8} === false ? 'Error' : 'Success' }"/>
-								</cells>
-							</ColumnListItem>
-						</items>
-					</Table>
+					<!--<List noDataText="Drop list items here" id="LISTA" items="{assignation}">-->
+					<!--	<items>-->
+					<!--		<ObjectListItem type="Active" counter="0" markFavorite="false" markFlagged="false" showMarkers="false" id="__item15" title="{Dock}">-->
+					<!--			<attributes>-->
+					<!--				<ObjectAttribute active="true" id="__attribute205" text="{h1} : {h2} : {h3}"/>-->
+					<!--			</attributes>-->
+					<!--		</ObjectListItem>-->
+					<!--	</items>-->
+					<!--</List>-->
+					<t:Table id="Table" rows="{assignation}" width="auto">
+						<t:columns>
+							<t:Column width="11rem">
+								<Label text="Dock"/>
+								<t:template>
+									<Text text="{Dock}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h1"/>
+								<t:template>
+									<Text text="{h1}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h2"/>
+								<t:template>
+									<Text text="{h2}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h3"/>
+								<t:template>
+									<Text text="{h3}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h4"/>
+								<t:template>
+									<Text text="{h4}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h5"/>
+								<t:template>
+									<Text text="{h5}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h6"/>
+								<t:template>
+									<Text text="{h6}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h7"/>
+								<t:template>
+									<Text text="{h7}"/>
+								</t:template>
+							</t:Column>
+							<t:Column width="3rem">
+								<Label text="h8"/>
+								<t:template>
+									<Text text="{h8}"/>
+								</t:template>
+							</t:Column>
+						</t:columns>
+					</t:Table>
+					<!--<Table id="lineItemsList" width="auto" items="{DockToOrders}" -->
+					<!--	noDataText="{i18n>detailLineItemTableNoDataText}" busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin">-->
+					<!-- Volver a sumarlo despues updateFinished="onListUpdateFinished" -->
+					<!--<headerToolbar>-->
+					<!--	<Toolbar id="lineItemsToolbar">-->
+					<!--		<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>-->
+					<!--	</Toolbar>-->
+					<!--</headerToolbar>-->
+					<!--	<columns>-->
+					<!--		<Column>-->
+					<!--			<Text text="{i18n>detailLineItemTableIDColumn}"/>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">-->
+					<!--			<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>-->
+					<!--		</Column>-->
+					<!--	</columns>-->
+					<!--	<items>-->
+					<!--		<ColumnListItem>-->
+					<!--			<cells>-->
+					<!--				<ObjectIdentifier title="{h1}" text="{dock}"/>-->
+					<!--				<ObjectNumber unit="{plant}"/>-->
+					<!--			</cells>-->
+					<!--		</ColumnListItem>-->
+					<!--	</items>-->
+					<!--</Table>-->
 				</l:content>
 			</l:VerticalLayout>
+			<!--<Text text="WORK IN PROGRESS" class="sapUiSmallMargin"/>-->
+			<!--<IconTabBar-->
+			<!--		id="iconTabBar"-->
+			<!--		class="sapUiResponsiveContentPadding">-->
+			<!--	<items>-->
+			<!--		<IconTabFilter-->
+			<!--				id="iconTabBarFilter1"-->
+			<!--				icon="sap-icon://hint"-->
+			<!--				tooltip="{i18n>detailIconTabBarInfo}">-->
+			<!--		</IconTabFilter>-->
+			<!--		<IconTabFilter-->
+			<!--				id="iconTabBarFilter2"-->
+			<!--				icon="sap-icon://attachment"-->
+			<!--				tooltip="{i18n>detailIconTabBarAttachments}">-->
+			<!--		</IconTabFilter>-->
+			<!--	</items>-->
+			<!--</IconTabBar>-->
+			<!--			<Table-->
+			<!--					id="lineItemsList"-->
+			<!--					width="auto"-->
+			<!--					items="{DockToOrders}"-->
+			<!--					updateFinished="onListUpdateFinished"-->
+			<!--					noDataText="{i18n>detailLineItemTableNoDataText}"-->
+			<!--					busyIndicatorDelay="{detailView>/lineItemTableDelay}"-->
+			<!--					class="sapUiResponsiveMargin">-->
+			<!--				<headerToolbar>-->
+			<!--					<Toolbar id="lineItemsToolbar">-->
+			<!--						<Title-->
+			<!--								id="lineItemsHeader"-->
+			<!--								text="{detailView>/lineItemListTitle}"/>-->
+			<!--					</Toolbar>-->
+			<!--				</headerToolbar>-->
+			<!--				<columns>-->
+			<!--					<Column>-->
+			<!--						<Text text="{i18n>detailLineItemTableIDColumn}"/>-->
+			<!--					</Column>-->
+			<!--					<Column-->
+			<!--							minScreenWidth="Tablet"-->
+			<!--							demandPopin="true"-->
+			<!--							hAlign="Right">-->
+			<!--						<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>-->
+			<!--					</Column>-->
+			<!--				</columns>-->
+			<!--				<items>-->
+			<!--					<ColumnListItem>-->
+			<!--						<cells>-->
+			<!--							<ObjectIdentifier-->
+			<!--									title="{date}"-->
+			<!--									text="{orderKey}"/>-->
+			<!--							<ObjectNumber-->
+			<!--								number="{-->
+			<!--									path: 'note',-->
+			<!--									formatter: '.formatter.currencyValue'-->
+			<!--								}"-->
+			<!--/>-->
+			<!--						</cells>-->
+			<!--					</ColumnListItem>-->
+			<!--				</items>-->
+			<!--			</Table>-->
 		</semantic:content>
+		<!--<semantic:sendEmailAction>-->
+		<!--	<semantic:SendEmailAction-->
+		<!--			id="shareEmail"-->
+		<!--			press="onShareEmailPress"/>-->
+		<!--</semantic:sendEmailAction>-->
 	</semantic:DetailPage>
 </mvc:View>

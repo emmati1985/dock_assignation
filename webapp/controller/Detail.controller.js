@@ -107,10 +107,7 @@ sap.ui.define([
 		_onObjectMatched: function(oEvent) {
 			var oArgs = oEvent.getParameter("arguments");
 			var vPlant = oArgs.Plant;
-<<<<<<< Upstream, based on a6e820d60e159d765202f6a775333889017f84c3
 			// var vDate  = oArgs.Date;
-=======
->>>>>>> c0e52d0 Con checks OK en detail
 			var oDate = this.oFormatYyyymmdd.parse(oArgs.Date);
 			var oModel = this.getModel();
 			
@@ -120,7 +117,6 @@ sap.ui.define([
 				aFilter.push(new Filter("Date", FilterOperator.EQ, oDate));
 			}
 			// filter binding
-<<<<<<< Upstream, based on a6e820d60e159d765202f6a775333889017f84c3
 			// var oList = this.getView().byId("LISTA");
 			// var oBinding = oList.getBinding("items");
 			// oBinding.filter(aFilter);
@@ -128,11 +124,6 @@ sap.ui.define([
 			var oTable = this.getView().byId("Table");
 			var oBindTab = oTable.getBinding("rows");
 			oBindTab.filter(aFilter);
-=======
-			var oTable = this.getView().byId("Table");
-			var oItemsTab = oTable.getBinding("items");
-			oItemsTab.filter(aFilter);
->>>>>>> c0e52d0 Con checks OK en detail
 			// filter(oFilter, "Application");
 			
 			oModel.metadataLoaded().then(function() {
