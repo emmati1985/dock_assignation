@@ -97,7 +97,8 @@ sap.ui.define([
 			var oCalendar = oEvent.oSource;
 			var aSelectedDates = oCalendar.getSelectedDates();
 			var oDate;
-			var vPlantId = this.byId("PlantId").getValue();
+			/*var vPlantId = this.byId("PlantId").getValue();*/
+			var vPlantId = this.byId("CBMasterPlant").getValue();
 
 			if (aSelectedDates.length > 0) {
 				oDate = aSelectedDates[0].getStartDate();

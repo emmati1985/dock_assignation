@@ -1,17 +1,27 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:semantic="sap.m.semantic" controllerName="dockass.controller.Master">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:semantic="sap.m.semantic"
+	controllerName="dockass.controller.Master">
 	<semantic:MasterPage id="page" title="{masterView>/title}" navButtonPress="onNavBack" showNavButton="true">
 		<semantic:subHeader>
 			<Bar id="headerBar">
-				<contentMiddle>
+				<!--<contentMiddle>
 					<Input id="PlantId" value="{/plant}" placeholder="{i18n>masterPlant}" width="60%"/>
-			<!--		<SearchField-->
-			<!--				id="searchField"-->
-			<!--				showRefreshButton="{= !${device>/support/touch} }"-->
-			<!--				tooltip="{i18n>masterSearchTooltip}"-->
-			<!--				width="100%"-->
-			<!--				search="onSearch">-->
-			<!--		</SearchField>-->
-				</contentMiddle>
+				</contentMiddle>-->
+				<contentLeft>
+					<ComboBox id="CBMasterPlant" showSecondaryValues="true" items="{ path:'/plantsSet', sorter: { path: 'Plant' } }"
+						selectionChange="onPlantChange" width="50%" placeholder="{i18n>masterPlant}">
+						<items>
+							<core:ListItem key="{Plant}" text="{Plant}" additionalText = "{Description}"/>
+						</items>
+					</ComboBox>
+					<!--		<SearchField-->
+					<!--				id="searchField"-->
+					<!--				showRefreshButton="{= !${device>/support/touch} }"-->
+					<!--				tooltip="{i18n>masterSearchTooltip}"-->
+					<!--				width="100%"-->
+					<!--				search="onSearch">-->
+					<!--		</SearchField>-->
+					<!--</contentMiddle>-->
+				</contentLeft>
 			</Bar>
 		</semantic:subHeader>
 		<semantic:content>
