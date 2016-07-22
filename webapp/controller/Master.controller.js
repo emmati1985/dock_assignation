@@ -37,20 +37,11 @@ sap.ui.define([
 			// 		this.getOwnerComponent().oListSelector.setBoundMasterList(oList);
 			// 	}.bind(this)
 			// });
-
-			// set data model on view
-			// var oData = {
-			//   plant : "no_vacio"
-			// };
-			// var oModel = new JSONModel(oData);
-			// this.setmodel(oModel);
-			// this.getView().setModel(oModel, "masterView");
-
 			this.oFormatYyyymmdd = sap.ui.core.format.DateFormat.getInstance({
 				pattern: "yyyyMMdd",
 				calendarType: sap.ui.core.CalendarType.Gregorian
 			});
-			
+
 			this.oFormatnav = sap.ui.core.format.DateFormat.getDateInstance();
 
 			this.getRouter().getRoute("master").attachPatternMatched(this._onMasterMatched, this);
@@ -84,26 +75,29 @@ sap.ui.define([
 			this._oList.getBinding("items").refresh();
 		},
 
-		/**
-		 * Event handler for the list selection event
-		 * @param {sap.ui.base.Event} oEvent the list selectionChange event
-		 * @public
+		/*
+		 * Event handler for interacion in Master VIEW
 		 */
-		// onSelectionChange : function (oEvent) {
-		// 	// get the list item, either from the listItem parameter or from the event's source itself (will depend on the device-dependent mode).
-		// 	this._showDetail(oEvent.getParameter("listItem") || oEvent.getSource());
-		// },
+		onPlantChange: function(oEvent) {
+			var vPlantId = oEvent.getSource().getSelectedKey();
+			if (vPlantId !== "") {
+				var oCalendar = this.byId("Calendar");
+				var aSelectedDates = oCalendar.getSelectedDates();
+				if (aSelectedDates.length > 0) {
+					var oDate = aSelectedDates[0].getStartDate();
+					this._showDetail(this.oFormatYyyymmdd.format(oDate), vPlantId);
+				}
+			}
+		},
+
 		onCalendarSelect: function(oEvent) {
-			var oCalendar = oEvent.oSource;
+			var oCalendar = oEvent.getSource();
 			var aSelectedDates = oCalendar.getSelectedDates();
-			var oDate;
-			/*var vPlantId = this.byId("PlantId").getValue();*/
 			var vPlantId = this.byId("CBMasterPlant").getValue();
 
-			if (aSelectedDates.length > 0) {
-				oDate = aSelectedDates[0].getStartDate();
+			if (aSelectedDates.length > 0 && vPlantId !== "") {
+				var oDate = aSelectedDates[0].getStartDate();
 				this._showDetail(this.oFormatYyyymmdd.format(oDate), vPlantId);
-				// this._showDetail(oDate, vPlantId);
 			}
 		},
 
