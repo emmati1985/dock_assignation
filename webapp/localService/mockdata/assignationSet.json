@@ -2,7 +2,7 @@
 	"Dbkey": "Dbkey 1",
 	"Plant": "WF",
 	"Dock": "Dock 1",
-	"Date": "/Date(1467514800000)/",
+	"Date": "/Date(1467687600000)/",
 	"h1": true,
 	"h2": true,
 	"h3": false,
@@ -24,7 +24,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 1')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "1"
 }, {
 	"Dbkey": "Dbkey 2",
 	"Plant": "KL",
@@ -51,7 +52,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 2')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "2"
 }, {
 	"Dbkey": "Dbkey 3",
 	"Plant": "WF",
@@ -78,7 +80,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 3')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "3"
 }, {
 	"Dbkey": "Dbkey 4",
 	"Plant": "KL",
@@ -105,7 +108,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 4')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "4"
 }, {
 	"Dbkey": "Dbkey 5",
 	"Plant": "WF",
@@ -132,7 +136,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 5')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "5"
 }, {
 	"Dbkey": "Dbkey 6",
 	"Plant": "WF",
@@ -159,7 +164,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 6')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "6"
 }, {
 	"Dbkey": "Dbkey 7",
 	"Plant": "WF",
@@ -186,7 +192,8 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 7')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "7"
 }, {
 	"Dbkey": "Dbkey 8",
 	"Plant": "WF",
@@ -213,5 +220,6 @@
 		"__deferred": {
 			"uri": "assignationSet('Dbkey 8')/plants"
 		}
-	}
+	},
+	"DbkeyOrder": "8"
 }]

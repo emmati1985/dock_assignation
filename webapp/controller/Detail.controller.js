@@ -34,6 +34,8 @@ sap.ui.define([
 			this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
 
 			this.setModel(oViewModel, "detailView");
+			
+			this.byId("Multibox").setEnabled(false);
 
 			this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
 		},
@@ -94,6 +96,19 @@ sap.ui.define([
 			}
 		},
 
+		onDockSel: function(oEvent) {
+			var vDockId = oEvent.getSource().getSelectedKey();
+			var oMulti = this.byId("Multibox");
+			var oMultItems = oMulti.getBinding("items");
+			oMulti.setEnabled(true);
+
+			// build filter array
+			var aFilter = [];
+			aFilter.push(new Filter("Dock", FilterOperator.EQ, vDockId));
+			//oMultItems.filter(aFilter);
+		
+		},
+
 		/* =========================================================== */
 		/* begin: internal methods                                     */
 		/* =========================================================== */
@@ -109,7 +124,7 @@ sap.ui.define([
 			var vPlant = oArgs.Plant;
 			var oDate = this.oFormatYyyymmdd.parse(oArgs.Date);
 			var oModel = this.getModel();
-			
+
 			// build filter array
 			var aFilter = [];
 			if (oDate) {
@@ -119,8 +134,15 @@ sap.ui.define([
 			var oTable = this.getView().byId("Table");
 			var oItemsTab = oTable.getBinding("items");
 			oItemsTab.filter(aFilter);
-			// filter(oFilter, "Application");
+
+			var oComBox = this.getView().byId("CBDock");
+			var oItemsCB = oComBox.getBinding("items");
+			oItemsCB.filter(aFilter);
 			
+			var oMultiBox = this.getView().byId("Multibox");
+			var oItemsMB = oMultiBox.getBinding("items");
+			oItemsMB.filter(aFilter);
+
 			oModel.metadataLoaded().then(function() {
 				var sObjectPath = this.getModel().createKey("plantsSet", {
 					Plant: vPlant

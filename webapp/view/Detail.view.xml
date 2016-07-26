@@ -1,13 +1,38 @@
 <!--xmlns:t="sap.ui.table"-->
-<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:core="sap.ui.core"
 	controllerName="dockass.controller.Detail">
 	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
 		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
 		<semantic:content>
-			<ObjectHeader id="objectHeader" title="{dock}"></ObjectHeader>
+			<!--			<ObjectHeader id="objectHeader" title="{dock}"></ObjectHeader>-->
 			<l:VerticalLayout>
-				<Image class="sapUiSmallMargin" src="http://emccochin.com/wp-content/uploads/2016/04/work-in-progress_01.png" height="10%" width="10%"/>
+				<!--<Image class="sapUiSmallMargin" src="http://emccochin.com/wp-content/uploads/2016/04/work-in-progress_01.png" height="10%" width="10%"/>-->
 				<l:content>
+					<Toolbar id="DetailTB">
+						<content>
+							<ComboBox id="CBDock" items="{ path:'assignation', sorter: { path: 'Dock' } }" visible="true" width="auto" placeholder="DOCK"
+								editable="true" selectionChange="onDockSel">
+								<items>
+									<core:ListItem key="{Dock}" text="{Dock}"/>
+								</items>
+							</ComboBox>
+							<ToolbarSpacer/>
+							<!--<ToolbarSeparator/>-->
+							<!--<ToolbarSpacer/>-->
+							<MultiComboBox id="Multibox" width="100%" items="{ path:'assignation', sorter: { path: 'Dock' } }">
+								<core:Item id="hr1" key="h1" text="{DbkeyOrder}"/>
+								<!--<core:Item id="hr2" key="h2" text="{DbkeyOrder}"/>-->
+								<!--<core:Item id="hr1" key="h1" text="08:00" enabled="{= ${h1} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr2" key="h2" text="09:00" enabled="{= ${h2} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr3" key="h3" text="10:00" enabled="{= ${h3} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr4" key="h4" text="11:00" enabled="{= ${h4} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr5" key="h5" text="12:00" enabled="{= ${h5} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr6" key="h6" text="13:00" enabled="{= ${h6} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr7" key="h7" text="14:00" enabled="{= ${h7} === false ? 'true' : 'false' }"/>
+								<core:Item id="hr8" key="h8" text="15:00" enabled="{= ${h8} === false ? 'true' : 'false' }"/>-->
+							</MultiComboBox>
+						</content>
+					</Toolbar>
 					<Table id="Table" width="auto" items="{path:'assignation', sorter: { path: 'Dock' }}">
 						<columns>
 							<Column id="column0">
@@ -60,14 +85,22 @@
 							<ColumnListItem id="collist">
 								<cells>
 									<ObjectIdentifier title="{Dock}"/>
-									<ObjectStatus id="stat1" icon="{= ${h1} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h1} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat2" icon="{= ${h2} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h2} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat3" icon="{= ${h3} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h3} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat4" icon="{= ${h4} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h4} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat5" icon="{= ${h5} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h5} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat6" icon="{= ${h6} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h6} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat7" icon="{= ${h7} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h7} === false ? 'Error' : 'Success' }"/>
-									<ObjectStatus id="stat8" icon="{= ${h8} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }" state="{= ${h8} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat1" icon="{= ${h1} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h1} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat2" icon="{= ${h2} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h2} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat3" icon="{= ${h3} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h3} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat4" icon="{= ${h4} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h4} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat5" icon="{= ${h5} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h5} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat6" icon="{= ${h6} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h6} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat7" icon="{= ${h7} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h7} === false ? 'Error' : 'Success' }"/>
+									<ObjectStatus id="stat8" icon="{= ${h8} === false ? 'sap-icon://message-error' : 'sap-icon://message-success' }"
+										state="{= ${h8} === false ? 'Error' : 'Success' }"/>
 								</cells>
 							</ColumnListItem>
 						</items>
