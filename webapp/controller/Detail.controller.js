@@ -23,6 +23,7 @@ sap.ui.define([
 			var oViewModel = new JSONModel({
 				busy: false,
 				delay: 0,
+				date: new Date("2012-07-01"),
 				lineItemListTitle: this.getResourceBundle().getText("detailLineItemTableHeading")
 			});
 
@@ -34,7 +35,7 @@ sap.ui.define([
 			this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
 
 			this.setModel(oViewModel, "detailView");
-			
+
 			this.byId("Multibox").setEnabled(false);
 
 			this.getOwnerComponent().getModel().metadataLoaded().then(this._onMetadataLoaded.bind(this));
@@ -98,13 +99,23 @@ sap.ui.define([
 
 		onDockSel: function(oEvent) {
 			var vDockId = oEvent.getSource().getSelectedKey();
+			var bcDockId = oEvent.getSource().getBindingContext();
+			var oDate   = this.getModel().date;
 			var oMulti = this.byId("Multibox");
-			var oMultItems = oMulti.getBinding("items");
+			
+			oMulti.setBindingContext(bcDockId);
+			
+			var oMultItems = oMulti.getBinding();
+			
+			
+			
+			
 			oMulti.setEnabled(true);
 
 			// build filter array
 			var aFilter = [];
-			aFilter.push(new Filter("Dock", FilterOperator.EQ, vDockId));
+			//aFilter.push(new Filter("Dock", FilterOperator.EQ, vDockId));
+			//aFilter.push(new Filter("Date", FilterOperator.EQ, oDate));
 			//oMultItems.filter(aFilter);
 		
 		},
@@ -120,6 +131,9 @@ sap.ui.define([
 		 * @private
 		 */
 		_onObjectMatched: function(oEvent) {
+			
+			this.byId("Multibox").setEnabled(false);
+			
 			var oArgs = oEvent.getParameter("arguments");
 			var vPlant = oArgs.Plant;
 			var oDate = this.oFormatYyyymmdd.parse(oArgs.Date);
@@ -135,13 +149,15 @@ sap.ui.define([
 			var oItemsTab = oTable.getBinding("items");
 			oItemsTab.filter(aFilter);
 
+
 			var oComBox = this.getView().byId("CBDock");
 			var oItemsCB = oComBox.getBinding("items");
 			oItemsCB.filter(aFilter);
 			
-			var oMultiBox = this.getView().byId("Multibox");
-			var oItemsMB = oMultiBox.getBinding("items");
-			oItemsMB.filter(aFilter);
+			//var oMultiBox = this.getView().byId("Multibox");
+			//var oItemsMB = oMultiBox.getBinding("items");
+			//oItemsMB.filter(aFilter);
+			this.getModel().date = oDate;
 
 			oModel.metadataLoaded().then(function() {
 				var sObjectPath = this.getModel().createKey("plantsSet", {

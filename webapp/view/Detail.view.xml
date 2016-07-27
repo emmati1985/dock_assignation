@@ -17,19 +17,17 @@
 								</items>
 							</ComboBox>
 							<ToolbarSpacer/>
-							<!--<ToolbarSeparator/>-->
-							<!--<ToolbarSpacer/>-->
-							<MultiComboBox id="Multibox" width="100%" items="{ path:'assignation', sorter: { path: 'Dock' } }">
-								<core:Item id="hr1" key="h1" text="{DbkeyOrder}"/>
-								<!--<core:Item id="hr2" key="h2" text="{DbkeyOrder}"/>-->
-								<!--<core:Item id="hr1" key="h1" text="08:00" enabled="{= ${h1} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr2" key="h2" text="09:00" enabled="{= ${h2} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr3" key="h3" text="10:00" enabled="{= ${h3} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr4" key="h4" text="11:00" enabled="{= ${h4} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr5" key="h5" text="12:00" enabled="{= ${h5} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr6" key="h6" text="13:00" enabled="{= ${h6} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr7" key="h7" text="14:00" enabled="{= ${h7} === false ? 'true' : 'false' }"/>
-								<core:Item id="hr8" key="h8" text="15:00" enabled="{= ${h8} === false ? 'true' : 'false' }"/>-->
+							<MultiComboBox id="Multibox" width="100%">
+								<!--items="{ path:'assignation', sorter: { path: 'Dock' } }">-->
+								<!--<core:Item key="{DbkeyOrder}-h1" text="{DbkeyOrder} - {h1}"/>-->
+								<core:Item id="hr1" key="h1" text="08:00"/><!--enabled="{= ${h1} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr2" key="h2" text="09:00"/><!--enabled="{= ${h2} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr3" key="h3" text="10:00"/><!--enabled="{= ${h3} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr4" key="h4" text="11:00"/><!--enabled="{= ${h4} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr5" key="h5" text="12:00"/><!--enabled="{= ${h5} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr6" key="h6" text="13:00"/><!--enabled="{= ${h6} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr7" key="h7" text="14:00"/><!--enabled="{= ${h7} === false ? 'true' : 'false' }"/>-->
+								<core:Item id="hr8" key="h8" text="15:00"/><!--enabled="{= ${h8} === false ? 'true' : 'false' }"/>-->
 							</MultiComboBox>
 						</content>
 					</Toolbar>
